@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="QodlyDemo_Matrix" uuid="02FBD94BA5E94FED94232D29AB63E405" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="item" uuid="21F98A05C2834639B28A496E42C07EFF" id="1">
+		<field name="ID" uuid="A999B776E9C84DC9A21FAF8E0FD8E9B8" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="reference" uuid="665F3E5330F244B58CCDA51DFC6516E4" type="10" limiting_length="255" id="2"/>
+		<field name="name" uuid="CE3B94C89A294FC5BB14E4D715C56176" type="10" limiting_length="255" id="3"/>
+		<field name="price" uuid="D324D5F4862A4408AFF36FF660732931" type="6" id="4"/>
+		<field name="stock" uuid="276F4888BC6046A89C49F4A93608EB63" type="6" id="5"/>
+		<field name="category" uuid="E3E7D6C31F2E48538EC98E01CFAF059B" type="10" limiting_length="255" id="6"/>
+		<primary_key field_name="ID" field_uuid="A999B776E9C84DC9A21FAF8E0FD8E9B8"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="9">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="40" top="40" width="366" height="240.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="1C2FEBB7DE964299B98D0DB889A568F1" type="7">
+		<field_ref uuid="A999B776E9C84DC9A21FAF8E0FD8E9B8" name="ID">
+			<table_ref uuid="21F98A05C2834639B28A496E42C07EFF" name="item"/>
+		</field_ref>
+	</index>
+</base>

@@ -1,0 +1,27 @@
+{
+  "applicationName": "Qodly demo matrix",
+  "description": "Simple demo showing matrix and datatable usage",
+  "visuals": [
+    {
+      "description": "Matrix example",
+      "image": "/$shared/visuals/matrix.jpg"
+    },
+    {
+      "description": "Datatable example",
+      "image": "/$shared/visuals/datatable1.jpg"
+    },
+    {
+      "description": "Another Datatable example",
+      "image": "/$shared/visuals/datatable2.jpg"
+    }
+  ],
+  "logo": {
+    "small": "logo_small_path",
+    "large": "/$shared/logo/Q-2.svg"
+  },
+  "qodlyVersion": "all",
+  "author": {
+    "name": "Qodly",
+    "url": "https://4d.com/"
+  }
+}

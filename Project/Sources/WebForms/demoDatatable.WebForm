@@ -1,0 +1,922 @@
+{
+  "metadata": {
+    "v": "1.0",
+    "datasources": [
+      {
+        "id": "items",
+        "type": "entitysel",
+        "dataclass": "item",
+        "initialValue": "all",
+        "depth": null,
+        "pageSize": 100
+      },
+      {
+        "id": "item",
+        "type": "entity",
+        "dataclass": "item",
+        "from": "items",
+        "namespace": "",
+        "initialValue": "first",
+        "depth": null
+      },
+      {
+        "id": "datatableCSS",
+        "type": "scalar",
+        "namespace": "",
+        "dataType": "string",
+        "initialValue": "datatableCSS1",
+        "events": [
+          {
+            "type": "method",
+            "dataclass": "DataStore",
+            "events": [
+              "onChange"
+            ],
+            "id": "kMpm1oPggtYPmFJJ19dq5Q",
+            "method": "ds.updateCSS",
+            "params": [
+              {
+                "id": "d76BAJ8mW84KaK3dzsjj96",
+                "datasource": "datatableCSS"
+              },
+              {
+                "id": "6uCJKLb5isvLjPoFDA4eut",
+                "datasource": "olddatatableCSS"
+              }
+            ],
+            "returns": {
+              "datasource": "olddatatableCSS"
+            }
+          }
+        ]
+      },
+      {
+        "id": "olddatatableCSS",
+        "type": "scalar",
+        "namespace": "",
+        "dataType": "string",
+        "initialValue": "datatableCSS1"
+      }
+    ],
+    "styles": [
+      {
+        "name": "inputText",
+        "content": "self {\n  \n}",
+        "children": {
+          "label": "ct6RNAa5nCB9KMCAQzmaX",
+          "input": "0gt6dqc_q5DqNZO2sDH0S"
+        },
+        "parentId": null,
+        "scope": "local",
+        "origin": "W15jGPBeUe",
+        "id": "6tpfkfYk1w5XCJcd9s953"
+      },
+      {
+        "id": "ct6RNAa5nCB9KMCAQzmaX",
+        "name": "inputText__label",
+        "content": "self {\n  font-weight : 500;\n}",
+        "scope": "local",
+        "parentId": "6tpfkfYk1w5XCJcd9s953"
+      },
+      {
+        "id": "0gt6dqc_q5DqNZO2sDH0S",
+        "name": "inputText__input",
+        "content": "self {\n  background-color : #ffffffff;\n}",
+        "scope": "local",
+        "parentId": "6tpfkfYk1w5XCJcd9s953"
+      },
+      {
+        "name": "datatableCSS1",
+        "content": "self {\n\n}",
+        "parentId": null,
+        "scope": "local",
+        "id": "gOy2UH2tC32bQ5ex7Eu9-"
+      },
+      {
+        "id": "EHxeYh5RoVcV_mAfHZzt_",
+        "name": "datatableCSS2",
+        "content": "self {\n  border-radius: 10px;\n  box-shadow: 0 0 40px 0 rgb(0 0 0 / 15%);\n}\n\nself .header .header-cell {\n  background-color: #4b4ba5;\n  color: #fff;\n  font-weight: bold;\n  padding: 1.25rem 2rem;\n}\n\nself .row {\n  align-items: center;\n}\n\nself .row .cell {\n  padding: 0.5rem 2rem;\n}\n\nself .row .cell > span {\n  justify-content: flex-start;\n}\n\nself .row.selected {\n  background-color: #d2d7f5;\n}\n\nself .row-even:not(.selected):not(:hover) {\n  background-color: #f8f6ff;\n}\n\nself .header .resizable > :not([hidden]) ~ :not([hidden]),\nself .row > :not([hidden]) ~ :not([hidden]),\nself .Grid .innerScrollContainer,\nself .Grid .innerScrollContainer > :not([hidden]) ~ :not([hidden]) {\n  border-width: 0;\n}",
+        "scope": "local",
+        "parentId": null,
+        "children": {}
+      },
+      {
+        "id": "cs3ISUFXeJKVEt1kd8HJk",
+        "name": "datatableCSS3",
+        "content": "self {\n\tbackground-color: black;\n}\n\nself .row {\n  align-items: center;\n}\n\nself .col-id > span {\n  justify-content: flex-start;\n}\n\nself .header {\n\tfont-weight: bold;\n}\n\nself .header .header-cell {\n\tbackground-color: #3d373d;\n\tborder-top: none;\n\tborder-bottom: none !important;\n\tcolor: #fff;\n\tfont-size: 11px;\n\ttext-transform: uppercase;\n\tletter-spacing: .2rem;\n}\n\nself .row {\n\tbackground-color: rgba(0, 0, 0, 0.1);\n\tcolor: #777;\n\ttransition: .3s all ease;\n}\n\nself .row:hover {\n\tcolor: white;\n}\n\nself .row:hover .col-name {\n\tcolor: #fdd114;\n}\n\nself .row.row-even {\n\tbackground-color: #3d363b\n}\n\nself .header,\nself .header .resizable > :not([hidden]) ~ :not([hidden]),\nself .row > :not([hidden]) ~ :not([hidden]),\nself .Grid .innerScrollContainer,\nself .Grid .innerScrollContainer > :not([hidden]) ~ :not([hidden]) {\n  border-width: 0;\n}",
+        "scope": "local",
+        "parentId": null,
+        "children": {}
+      },
+      {
+        "id": "lVr2HfCH44S8fJekg24L7",
+        "name": "datatableCSS4",
+        "content": "self .header .header-cell {\n  background-color: #324960;\n  color: #fff;\n  font-weight: bold;\n  font-size: 14px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\nself .header .header-even {\n  background-color: #4fc3a1;\n}\n\nself .row {\n  align-items: center;\n}\n\nself .row .cell {\n  font-size: 14px;\n  text-align: center;\n}\n\nself .row .cell > span {\n  justify-content: center;\n}\n\nself .row.selected {\n  background-color: #caede2;\n}\n\nself .row-even:not(.selected):not(:hover) {\n  background-color: #f8f8f8;\n}\n\nself .header .resizable > :not([hidden]) ~ :not([hidden]),\nself .row > :not([hidden]) ~ :not([hidden]),\nself .Grid .innerScrollContainer,\nself .Grid .innerScrollContainer > :not([hidden]) ~ :not([hidden]) {\n  border-width: 0;\n}",
+        "scope": "local",
+        "parentId": null,
+        "children": {}
+      }
+    ]
+  },
+  "components": {
+    "ROOT": {
+      "type": {
+        "resolvedName": "Container"
+      },
+      "isCanvas": true,
+      "props": {
+        "classNames": [],
+        "events": [],
+        "className": "bg-white h-full w-full px-6",
+        "style": {
+          "borderRadius": "0px"
+        },
+        "airyMode": false
+      },
+      "displayName": "Webform",
+      "custom": {},
+      "parent": "",
+      "hidden": false,
+      "nodes": [
+        "OEvCiHXswP",
+        "5MQNK0_R21"
+      ],
+      "linkedNodes": {}
+    },
+    "5MQNK0_R21": {
+      "type": {
+        "resolvedName": "StyleBox"
+      },
+      "isCanvas": true,
+      "props": {
+        "events": [],
+        "style": {
+          "display": "flex"
+        }
+      },
+      "displayName": "Stylebox",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [
+        "_l8l1590Tq",
+        "gCnpsedD94"
+      ],
+      "linkedNodes": {}
+    },
+    "_l8l1590Tq": {
+      "type": {
+        "resolvedName": "StyleBox"
+      },
+      "isCanvas": true,
+      "props": {
+        "events": [],
+        "style": {}
+      },
+      "displayName": "Stylebox",
+      "custom": {},
+      "parent": "5MQNK0_R21",
+      "hidden": false,
+      "nodes": [
+        "DwyzYwyxBc",
+        "webcrJ2Niq"
+      ],
+      "linkedNodes": {}
+    },
+    "gCnpsedD94": {
+      "type": {
+        "resolvedName": "StyleBox"
+      },
+      "isCanvas": true,
+      "props": {
+        "events": [],
+        "style": {
+          "display": "flex",
+          "alignItems": "center",
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "gap": "10px"
+        }
+      },
+      "displayName": "Stylebox",
+      "custom": {},
+      "parent": "5MQNK0_R21",
+      "hidden": false,
+      "nodes": [
+        "8GQ_FmxNgl",
+        "IHm5vHBFE-"
+      ],
+      "linkedNodes": {}
+    },
+    "8GQ_FmxNgl": {
+      "type": {
+        "resolvedName": "StyleBox"
+      },
+      "isCanvas": true,
+      "props": {
+        "events": [],
+        "style": {
+          "display": "flex",
+          "justifyContent": "center"
+        }
+      },
+      "displayName": "Stylebox",
+      "custom": {},
+      "parent": "gCnpsedD94",
+      "hidden": false,
+      "nodes": [
+        "j2GNkMqR1x"
+      ],
+      "linkedNodes": {}
+    },
+    "j2GNkMqR1x": {
+      "type": {
+        "resolvedName": "StyleBox"
+      },
+      "isCanvas": true,
+      "props": {
+        "events": [],
+        "style": {
+          "display": "flex",
+          "flexDirection": "column",
+          "gap": "10px",
+          "borderWidth": "1px",
+          "borderRadius": "8px",
+          "backgroundColor": "#fafafaff",
+          "height": "fit-content",
+          "width": "500px",
+          "paddingTop": "18px",
+          "paddingRight": "18px",
+          "paddingBottom": "18px",
+          "paddingLeft": "18px"
+        }
+      },
+      "displayName": "Stylebox",
+      "custom": {},
+      "parent": "8GQ_FmxNgl",
+      "hidden": false,
+      "nodes": [
+        "FhmlG5q-jG",
+        "MZpnhI7svt",
+        "Bo-oMS0DhT",
+        "FkAscXl4Ll",
+        "PlFqBhBbNs"
+      ],
+      "linkedNodes": {}
+    },
+    "FhmlG5q-jG": {
+      "type": {
+        "resolvedName": "TextInput"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "placeholder": "placeholder",
+        "label": "label",
+        "labelPosition": "top",
+        "style": {},
+        "classNames": [
+          "inputText"
+        ]
+      },
+      "displayName": "Text Input",
+      "custom": {},
+      "parent": "j2GNkMqR1x",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {
+        "label": "eQuqKVY_HK",
+        "input": "esnVzvvGLL"
+      }
+    },
+    "eQuqKVY_HK": {
+      "type": {
+        "resolvedName": "Label"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "moveable": false,
+        "text": "Reference",
+        "style": {},
+        "classNames": [
+          "inputText__label"
+        ],
+        "deletable": true
+      },
+      "displayName": "Label",
+      "custom": {},
+      "parent": "FhmlG5q-jG",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "esnVzvvGLL": {
+      "type": {
+        "resolvedName": "Input"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "deletable": false,
+        "className": "fd-input w-full bg-transparent",
+        "type": "text",
+        "datasource": "item.reference",
+        "style": {},
+        "classNames": [
+          "inputText__input"
+        ],
+        "moveable": false,
+        "placeholder": "",
+        "readonly": false
+      },
+      "displayName": "Input",
+      "custom": {},
+      "parent": "FhmlG5q-jG",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "MZpnhI7svt": {
+      "type": {
+        "resolvedName": "TextInput"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "placeholder": "placeholder",
+        "label": "label",
+        "labelPosition": "top",
+        "classNames": [
+          "inputText"
+        ]
+      },
+      "displayName": "Text Input",
+      "custom": {},
+      "parent": "j2GNkMqR1x",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {
+        "label": "qgoLpr3Zhw",
+        "input": "4Wk1h9YB9M"
+      }
+    },
+    "qgoLpr3Zhw": {
+      "type": {
+        "resolvedName": "Label"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "moveable": false,
+        "text": "Name",
+        "deletable": true,
+        "classNames": [
+          "inputText__label"
+        ]
+      },
+      "displayName": "Label",
+      "custom": {},
+      "parent": "MZpnhI7svt",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "4Wk1h9YB9M": {
+      "type": {
+        "resolvedName": "Input"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "deletable": false,
+        "className": "fd-input w-full bg-transparent",
+        "type": "text",
+        "datasource": "item.name",
+        "moveable": false,
+        "placeholder": "",
+        "readonly": false,
+        "classNames": [
+          "inputText__input"
+        ]
+      },
+      "displayName": "Input",
+      "custom": {},
+      "parent": "MZpnhI7svt",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "Bo-oMS0DhT": {
+      "type": {
+        "resolvedName": "TextInput"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "placeholder": "placeholder",
+        "label": "label",
+        "labelPosition": "top",
+        "classNames": [
+          "inputText"
+        ]
+      },
+      "displayName": "Text Input",
+      "custom": {},
+      "parent": "j2GNkMqR1x",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {
+        "label": "TP8OdwFbxc",
+        "input": "XQJ-VSuMnE"
+      }
+    },
+    "TP8OdwFbxc": {
+      "type": {
+        "resolvedName": "Label"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "moveable": false,
+        "text": "Price",
+        "deletable": true,
+        "classNames": [
+          "inputText__label"
+        ]
+      },
+      "displayName": "Label",
+      "custom": {},
+      "parent": "Bo-oMS0DhT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "XQJ-VSuMnE": {
+      "type": {
+        "resolvedName": "Input"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "deletable": false,
+        "className": "fd-input w-full bg-transparent",
+        "type": "text",
+        "datasource": "item.price",
+        "moveable": false,
+        "placeholder": "",
+        "readonly": false,
+        "classNames": [
+          "inputText__input"
+        ]
+      },
+      "displayName": "Input",
+      "custom": {},
+      "parent": "Bo-oMS0DhT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "FkAscXl4Ll": {
+      "type": {
+        "resolvedName": "TextInput"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "placeholder": "placeholder",
+        "label": "label",
+        "labelPosition": "top",
+        "classNames": [
+          "inputText"
+        ]
+      },
+      "displayName": "Text Input",
+      "custom": {},
+      "parent": "j2GNkMqR1x",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {
+        "label": "aFhBzujx1V",
+        "input": "L01Gm3js4L"
+      }
+    },
+    "aFhBzujx1V": {
+      "type": {
+        "resolvedName": "Label"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "moveable": false,
+        "text": "Stock",
+        "deletable": true,
+        "classNames": [
+          "inputText__label"
+        ]
+      },
+      "displayName": "Label",
+      "custom": {},
+      "parent": "FkAscXl4Ll",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "L01Gm3js4L": {
+      "type": {
+        "resolvedName": "Input"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "deletable": false,
+        "className": "fd-input w-full bg-transparent",
+        "type": "text",
+        "datasource": "item.stock",
+        "moveable": false,
+        "placeholder": "",
+        "readonly": false,
+        "classNames": [
+          "inputText__input"
+        ]
+      },
+      "displayName": "Input",
+      "custom": {},
+      "parent": "FkAscXl4Ll",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "PlFqBhBbNs": {
+      "type": {
+        "resolvedName": "TextInput"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "placeholder": "placeholder",
+        "label": "label",
+        "labelPosition": "top",
+        "classNames": [
+          "inputText"
+        ]
+      },
+      "displayName": "Text Input",
+      "custom": {},
+      "parent": "j2GNkMqR1x",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {
+        "label": "B0FO8snEVd",
+        "input": "D257lhaD_e"
+      }
+    },
+    "B0FO8snEVd": {
+      "type": {
+        "resolvedName": "Label"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "moveable": false,
+        "text": "Category",
+        "deletable": true,
+        "classNames": [
+          "inputText__label"
+        ]
+      },
+      "displayName": "Label",
+      "custom": {},
+      "parent": "PlFqBhBbNs",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "D257lhaD_e": {
+      "type": {
+        "resolvedName": "Input"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "deletable": false,
+        "className": "fd-input w-full bg-transparent",
+        "type": "text",
+        "datasource": "item.category",
+        "moveable": false,
+        "placeholder": "",
+        "readonly": false,
+        "classNames": [
+          "inputText__input"
+        ]
+      },
+      "displayName": "Input",
+      "custom": {},
+      "parent": "PlFqBhBbNs",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "IHm5vHBFE-": {
+      "type": {
+        "resolvedName": "StyleBox"
+      },
+      "isCanvas": true,
+      "props": {
+        "events": [],
+        "style": {
+          "display": "flex",
+          "justifyContent": "flex-end"
+        }
+      },
+      "displayName": "Stylebox",
+      "custom": {},
+      "parent": "gCnpsedD94",
+      "hidden": false,
+      "nodes": [
+        "p3aDT5DumO"
+      ],
+      "linkedNodes": {}
+    },
+    "p3aDT5DumO": {
+      "type": {
+        "resolvedName": "Button"
+      },
+      "isCanvas": false,
+      "props": {
+        "text": "Save",
+        "classNames": [
+          "hoverButton"
+        ],
+        "events": [
+          {
+            "type": "simple-action",
+            "id": "vjykWNxoZrnyv8P8ZpzANZ",
+            "events": [
+              "onclick"
+            ],
+            "action": "save",
+            "datasource": {
+              "name": "item",
+              "from": "items",
+              "type": "entity",
+              "namespace": ""
+            },
+            "feedback": {
+              "enabled": true,
+              "messages": {
+                "onSuccess": "Success",
+                "onFail": "Fail"
+              }
+            }
+          }
+        ],
+        "iconPosition": "hidden",
+        "style": {
+          "display": "inline"
+        }
+      },
+      "displayName": "Button",
+      "custom": {},
+      "parent": "IHm5vHBFE-",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {
+        "icon": "dPpMLxrtU_"
+      }
+    },
+    "dPpMLxrtU_": {
+      "type": {
+        "resolvedName": "Icon"
+      },
+      "isCanvas": false,
+      "props": {
+        "classNames": [],
+        "events": [],
+        "icon": "fa-star"
+      },
+      "displayName": "Icon",
+      "custom": {},
+      "parent": "p3aDT5DumO",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "webcrJ2Niq": {
+      "type": {
+        "resolvedName": "DataTable"
+      },
+      "isCanvas": false,
+      "props": {
+        "loopable": true,
+        "classNames": [
+          "datatableCSS1"
+        ],
+        "events": [],
+        "style": {
+          "height": "600px",
+          "width": "1000px",
+          "boxShadow": "4px 5px 11px 0px #0000007f"
+        },
+        "headerHeight": 36,
+        "rowHeight": 30,
+        "columns": [
+          {
+            "title": "Reference",
+            "source": "reference",
+            "format": "",
+            "width": "150px",
+            "sorting": true,
+            "id": "8QkUT1RL2U4iwh7uW4MjKJ"
+          },
+          {
+            "title": "Category",
+            "source": "category",
+            "format": "",
+            "width": "114px",
+            "sorting": true,
+            "id": "v7ruxh7vmz5oqUzXNdVPAy"
+          },
+          {
+            "title": "Name",
+            "source": "name",
+            "format": "",
+            "width": "443px",
+            "sorting": true,
+            "id": "mrrDVmHeZBFnetzTkFhjD7"
+          },
+          {
+            "title": "Price",
+            "source": "price",
+            "format": "",
+            "width": "176px",
+            "sorting": true,
+            "id": "ap7NCBQASPEjZbb5StuwUF"
+          },
+          {
+            "title": "Stock",
+            "source": "stock",
+            "format": "",
+            "width": "95px",
+            "sorting": true,
+            "id": "j8ybqV1vZYqYw6CKwqJjws"
+          }
+        ],
+        "datasource": "items",
+        "currentElement": "item",
+        "serverSideRef": "datatable"
+      },
+      "displayName": "DataTable",
+      "custom": {},
+      "parent": "_l8l1590Tq",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "OEvCiHXswP": {
+      "type": {
+        "resolvedName": "StyleBox"
+      },
+      "isCanvas": true,
+      "props": {
+        "events": []
+      },
+      "displayName": "Stylebox",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [
+        "BKe2YsAsbn",
+        "Bwv2SPJRKS"
+      ],
+      "linkedNodes": {}
+    },
+    "BKe2YsAsbn": {
+      "type": {
+        "resolvedName": "Text"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "doc": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Here below a DataTable showing ",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false
+              },
+              {
+                "type": "datasource",
+                "datasource": "items.length",
+                "children": [
+                  {
+                    "bold": true,
+                    "italic": false,
+                    "underlined": false,
+                    "strikethrough": false,
+                    "text": "999999"
+                  }
+                ],
+                "dsType": "long",
+                "format": ""
+              },
+              {
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "text": " records from the database (don't forget to generate data!)"
+              }
+            ]
+          }
+        ],
+        "datasource": "items.length"
+      },
+      "displayName": "Text",
+      "custom": {},
+      "parent": "OEvCiHXswP",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "Bwv2SPJRKS": {
+      "type": {
+        "resolvedName": "Text"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "doc": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "DataTable allows you to quickly implement tables showing lists of data from your database.",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false
+              }
+            ]
+          }
+        ],
+        "datasource": ""
+      },
+      "displayName": "Text",
+      "custom": {},
+      "parent": "OEvCiHXswP",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "DwyzYwyxBc": {
+      "type": {
+        "resolvedName": "Radio"
+      },
+      "isCanvas": false,
+      "props": {
+        "classNames": [],
+        "events": [],
+        "defaultValue": "dataTableCSS1",
+        "mode": "single",
+        "type": "tabs",
+        "options": [
+          {
+            "label": "Basic Look",
+            "value": "datatableCSS1",
+            "id": "uRsyr6Xg3NPYW6qqVTXNMR"
+          },
+          {
+            "label": "Style 1",
+            "value": "datatableCSS2",
+            "id": "6k9dx9Ld6ebwywiaxNEmh4"
+          },
+          {
+            "label": "Style 2",
+            "value": "datatableCSS3",
+            "id": "9uaz3MxhPnoRrUCKWpkR4C"
+          },
+          {
+            "label": "Style 3",
+            "value": "datatableCSS4",
+            "id": "fEvBMmEmTAGFVpPuUfd2to"
+          }
+        ],
+        "style": {
+          "textAlign": "center"
+        },
+        "datasource": "datatableCSS"
+      },
+      "displayName": "Radio",
+      "custom": {},
+      "parent": "_l8l1590Tq",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    }
+  }
+}
