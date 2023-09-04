@@ -123,12 +123,12 @@
 				},
 				"datasource": "items",
 				"gridProps": {
-					"styleboxWidth": 891,
+					"styleboxWidth": 855,
 					"styleboxHeight": 76,
-					"enableMosaic": false,
+					"enableMosaic": true,
 					"enableFlex": true,
 					"flexProps": {
-						"nbOfRows": 11,
+						"nbOfRows": 4,
 						"nbOfColumns": 1
 					}
 				},
@@ -177,7 +177,7 @@
 			"displayName": "Stylebox",
 			"custom": {
 				"contentHeight": 76,
-				"contentWidth": 891
+				"contentWidth": 855
 			},
 			"parent": "UYujj6eLDD",
 			"hidden": false,
@@ -406,7 +406,7 @@
 									}
 								],
 								"dsType": "number",
-								"format": ""
+								"format": "[Red][<=1000]"
 							},
 							{
 								"text": " units left"

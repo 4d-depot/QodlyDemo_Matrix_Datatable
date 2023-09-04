@@ -67,7 +67,22 @@
 			"isCanvas": true,
 			"props": {
 				"classNames": [],
-				"events": [],
+				"events": [
+					{
+						"type": "simple-action",
+						"id": "rZnaQCCFKSMWAdCRusAeac",
+						"events": [
+							"onload"
+						],
+						"action": "first",
+						"datasource": {
+							"name": "item",
+							"from": "items",
+							"type": "entity",
+							"namespace": ""
+						}
+					}
+				],
 				"className": "bg-white h-full w-full px-6",
 				"airyMode": false,
 				"style": {
@@ -103,12 +118,12 @@
 				},
 				"datasource": "items",
 				"gridProps": {
-					"styleboxWidth": 891,
+					"styleboxWidth": 855,
 					"styleboxHeight": 76,
-					"enableMosaic": false,
+					"enableMosaic": true,
 					"enableFlex": true,
 					"flexProps": {
-						"nbOfRows": 11,
+						"nbOfRows": 10,
 						"nbOfColumns": 1
 					}
 				},
@@ -146,7 +161,7 @@
 			"displayName": "Stylebox",
 			"custom": {
 				"contentHeight": 76,
-				"contentWidth": 891
+				"contentWidth": 855
 			},
 			"parent": "UYujj6eLDD",
 			"hidden": false,
@@ -371,7 +386,7 @@
 									}
 								],
 								"dsType": "number",
-								"format": ""
+								"format": "[Red][<=1000]"
 							},
 							{
 								"text": " units left"
@@ -530,7 +545,7 @@
 				"gcJOYqeQc8",
 				"E1ecvDlOzQ",
 				"JaBKqn9gR-",
-				"Oml4f-P_bS"
+				"BqcjM8_u0Q"
 			],
 			"linkedNodes": {}
 		},
@@ -607,76 +622,6 @@
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"Oml4f-P_bS": {
-			"type": {
-				"resolvedName": "TextInput"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"placeholder": "placeholder",
-				"label": "label",
-				"labelPosition": "top",
-				"classNames": [
-					"inputText"
-				]
-			},
-			"displayName": "Text Input",
-			"custom": {},
-			"parent": "u7zxOHED3r",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {
-				"label": "1iK3wtCGqf",
-				"input": "Ndc2MGq8_t"
-			}
-		},
-		"1iK3wtCGqf": {
-			"type": {
-				"resolvedName": "Label"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"moveable": false,
-				"text": "Category",
-				"deletable": true,
-				"classNames": [
-					"inputText__label"
-				]
-			},
-			"displayName": "Label",
-			"custom": {},
-			"parent": "Oml4f-P_bS",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"Ndc2MGq8_t": {
-			"type": {
-				"resolvedName": "Input"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"deletable": false,
-				"className": "fd-input w-full bg-transparent",
-				"type": "text",
-				"datasource": "item.category",
-				"moveable": false,
-				"placeholder": "",
-				"readonly": false,
-				"classNames": [
-					"inputText__input"
-				]
-			},
-			"displayName": "Input",
-			"custom": {},
-			"parent": "Oml4f-P_bS",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
 		"JaBKqn9gR-": {
 			"type": {
 				"resolvedName": "TextInput"
@@ -731,14 +676,16 @@
 				"events": [],
 				"deletable": false,
 				"className": "fd-input w-full bg-transparent",
-				"type": "text",
+				"type": "number",
 				"datasource": "item.stock",
 				"moveable": false,
 				"placeholder": "",
 				"readonly": false,
 				"classNames": [
 					"inputText__input"
-				]
+				],
+				"format": "[Red][<=1000]",
+				"dataType": "number"
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -808,7 +755,9 @@
 				"readonly": false,
 				"classNames": [
 					"inputText__input"
-				]
+				],
+				"format": "#,##0.00 €",
+				"dataType": "number"
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -912,8 +861,8 @@
 						"feedback": {
 							"enabled": true,
 							"messages": {
-								"onSuccess": "Success",
-								"onFail": "Fail"
+								"onSuccess": "Item saved!",
+								"onFail": "Failed"
 							}
 						}
 					}
@@ -1186,7 +1135,45 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "Some conditionnal formatting can be achieved with CSS: here CAT-5 items have a red label instead of grey."
+								"text": "Conditionnal formatting can be achieved:"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "- with CSS: here CAT-5 items have a red label instead of grey, see "
+							},
+							{
+								"bold": false,
+								"italic": true,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "categoryItem"
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " in Style Library"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "- with text formatting: use this to format currencies or warn low quantities"
 							}
 						]
 					}
@@ -1196,6 +1183,122 @@
 			"displayName": "Text",
 			"custom": {},
 			"parent": "QsB2SYQ8ig",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"BqcjM8_u0Q": {
+			"type": {
+				"resolvedName": "SelectInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"placeholder": "placeholder",
+				"label": "label",
+				"classNames": [
+					"inputText"
+				],
+				"labelPosition": "top"
+			},
+			"displayName": "Select input",
+			"custom": {},
+			"parent": "u7zxOHED3r",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "aH_Bg1i0yI",
+				"select": "oiqHmw0UdT"
+			}
+		},
+		"aH_Bg1i0yI": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"moveable": false,
+				"classNames": [
+					"inputText__label"
+				],
+				"text": "Category",
+				"deletable": true
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "BqcjM8_u0Q",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"oiqHmw0UdT": {
+			"type": {
+				"resolvedName": "Select"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"deletable": false,
+				"className": "fd-select",
+				"options": [
+					{
+						"label": "CAT-0",
+						"value": "CAT-0",
+						"id": "rFt5ziiw8cmdkZcz66uPy7"
+					},
+					{
+						"label": "CAT-1",
+						"value": "CAT-1",
+						"id": "pMdmpNUWy2xA2KdNAxMryT"
+					},
+					{
+						"label": "CAT-2",
+						"value": "CAT-2",
+						"id": "cFRLUeuhGwuNekyAWGJrCg"
+					},
+					{
+						"label": "CAT-3",
+						"value": "CAT-3",
+						"id": "jQZqYT5hefjTgKhnqUKSZ5"
+					},
+					{
+						"label": "CAT-4",
+						"value": "CAT-4",
+						"id": "2thKf7tEj7171tsR2T4KAy"
+					},
+					{
+						"label": "CAT-5",
+						"value": "CAT-5",
+						"id": "vkjBbbwQBUqrVF569nsL9r"
+					},
+					{
+						"label": "CAT-6",
+						"value": "CAT-6",
+						"id": "mnuua6KKQrk419Kbab63Qz"
+					},
+					{
+						"label": "CAT-7",
+						"value": "CAT-7",
+						"id": "qxZxrdoJaVEu9iCXhY6SJ6"
+					},
+					{
+						"label": "CAT-8",
+						"value": "CAT-8",
+						"id": "j9X46CS9mVGM3yuEA72hyb"
+					},
+					{
+						"label": "CAT-9",
+						"value": "CAT-9",
+						"id": "sceDFskDvBJiqZ444GVfTU"
+					}
+				],
+				"datasource": "item.category",
+				"moveable": false
+			},
+			"displayName": "Select",
+			"custom": {},
+			"parent": "BqcjM8_u0Q",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

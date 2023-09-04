@@ -1,27 +1,38 @@
 {
-  "applicationName": "Qodly demo matrix",
+  "applicationName": "Qodly matrix and datatable Demo",
   "description": "Simple demo showing matrix and datatable usage",
+  "details": "This demo application presents matrix and datatable component with a simple database. You will discover how to use events, conditional formatting, browse items and update them, handle CSS... have fun",
   "visuals": [
     {
-      "description": "Matrix example",
+      "description": "Matrix showing items",
       "image": "/$shared/visuals/matrix.jpg"
     },
     {
-      "description": "Datatable example",
+      "description": "Datatable with basic styling",
       "image": "/$shared/visuals/datatable1.jpg"
     },
     {
-      "description": "Another Datatable example",
+      "description": "Datatable with dark style",
       "image": "/$shared/visuals/datatable2.jpg"
+    },
+    {
+      "description": "Datatable with blue style",
+      "image": "/$shared/visuals/datatable3.jpg"
+    },
+    {
+      "description": "Matrix with mouse hover",
+      "image": "/$shared/visuals/matrix2.jpg"
     }
   ],
   "logo": {
     "small": "logo_small_path",
-    "large": "/$shared/logo/Q-2.svg"
+    "large": "/$shared/logos/Q-2.svg"
   },
   "qodlyVersion": "all",
   "author": {
     "name": "Qodly",
-    "url": "https://4d.com/"
-  }
+    "url": "https://www.qodly.com/"
+  },
+  "category": "Qodly starters",
+  "language": "English"
 }

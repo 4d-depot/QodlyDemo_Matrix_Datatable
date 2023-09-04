@@ -1,5 +1,6 @@
 Class extends DataStoreImplementation
 
+
 exposed Function getManifestObject() : Object
 	var $manifestFile : 4D:C1709.File
 	var $manifestObject : Object
@@ -10,10 +11,17 @@ exposed Function getManifestObject() : Object
 	return $manifestObject
 	
 	
-exposed Function updateCSS($cssName : Text; $oldCSSName : Text) : Text
+exposed Function updateCSS($cssName : Text; $oldCSSName : Text)
+	
 	Web Form:C1735["datatable"].removeCSSClass($oldCSSName)
 	Web Form:C1735["datatable"].addCSSClass($cssName)
 	return $cssName
 	
 exposed Function getNull() : Variant
 	return Null:C1517
+	
+exposed Function checkData()
+	If (ds:C1482.item.all().length=0)
+		throw:C1805(1; "Please generate data before entering the demo!")
+	End if 
+	

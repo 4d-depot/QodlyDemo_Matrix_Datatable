@@ -55,7 +55,7 @@
         "type": "scalar",
         "namespace": "",
         "dataType": "string",
-        "initialValue": "datatableCSS1"
+        "initialValue": ""
       }
     ],
     "styles": [
@@ -67,7 +67,6 @@
           "input": "0gt6dqc_q5DqNZO2sDH0S"
         },
         "parentId": null,
-        "scope": "local",
         "origin": "W15jGPBeUe",
         "id": "6tpfkfYk1w5XCJcd9s953"
       },
@@ -75,28 +74,24 @@
         "id": "ct6RNAa5nCB9KMCAQzmaX",
         "name": "inputText__label",
         "content": "self {\n  font-weight : 500;\n}",
-        "scope": "local",
         "parentId": "6tpfkfYk1w5XCJcd9s953"
       },
       {
         "id": "0gt6dqc_q5DqNZO2sDH0S",
         "name": "inputText__input",
         "content": "self {\n  background-color : #ffffffff;\n}",
-        "scope": "local",
         "parentId": "6tpfkfYk1w5XCJcd9s953"
       },
       {
         "name": "datatableCSS1",
         "content": "self {\n\n}",
         "parentId": null,
-        "scope": "local",
         "id": "gOy2UH2tC32bQ5ex7Eu9-"
       },
       {
         "id": "EHxeYh5RoVcV_mAfHZzt_",
         "name": "datatableCSS2",
         "content": "self {\n  border-radius: 10px;\n  box-shadow: 0 0 40px 0 rgb(0 0 0 / 15%);\n}\n\nself .header .header-cell {\n  background-color: #4b4ba5;\n  color: #fff;\n  font-weight: bold;\n  padding: 1.25rem 2rem;\n}\n\nself .row {\n  align-items: center;\n}\n\nself .row .cell {\n  padding: 0.5rem 2rem;\n}\n\nself .row .cell > span {\n  justify-content: flex-start;\n}\n\nself .row.selected {\n  background-color: #d2d7f5;\n}\n\nself .row-even:not(.selected):not(:hover) {\n  background-color: #f8f6ff;\n}\n\nself .header .resizable > :not([hidden]) ~ :not([hidden]),\nself .row > :not([hidden]) ~ :not([hidden]),\nself .Grid .innerScrollContainer,\nself .Grid .innerScrollContainer > :not([hidden]) ~ :not([hidden]) {\n  border-width: 0;\n}",
-        "scope": "local",
         "parentId": null,
         "children": {}
       },
@@ -104,7 +99,6 @@
         "id": "cs3ISUFXeJKVEt1kd8HJk",
         "name": "datatableCSS3",
         "content": "self {\n\tbackground-color: black;\n}\n\nself .row {\n  align-items: center;\n}\n\nself .col-id > span {\n  justify-content: flex-start;\n}\n\nself .header {\n\tfont-weight: bold;\n}\n\nself .header .header-cell {\n\tbackground-color: #3d373d;\n\tborder-top: none;\n\tborder-bottom: none !important;\n\tcolor: #fff;\n\tfont-size: 11px;\n\ttext-transform: uppercase;\n\tletter-spacing: .2rem;\n}\n\nself .row {\n\tbackground-color: rgba(0, 0, 0, 0.1);\n\tcolor: #777;\n\ttransition: .3s all ease;\n}\n\nself .row:hover {\n\tcolor: white;\n}\n\nself .row:hover .col-name {\n\tcolor: #fdd114;\n}\n\nself .row.row-even {\n\tbackground-color: #3d363b\n}\n\nself .header,\nself .header .resizable > :not([hidden]) ~ :not([hidden]),\nself .row > :not([hidden]) ~ :not([hidden]),\nself .Grid .innerScrollContainer,\nself .Grid .innerScrollContainer > :not([hidden]) ~ :not([hidden]) {\n  border-width: 0;\n}",
-        "scope": "local",
         "parentId": null,
         "children": {}
       },
@@ -112,7 +106,6 @@
         "id": "lVr2HfCH44S8fJekg24L7",
         "name": "datatableCSS4",
         "content": "self .header .header-cell {\n  background-color: #324960;\n  color: #fff;\n  font-weight: bold;\n  font-size: 14px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\nself .header .header-even {\n  background-color: #4fc3a1;\n}\n\nself .row {\n  align-items: center;\n}\n\nself .row .cell {\n  font-size: 14px;\n  text-align: center;\n}\n\nself .row .cell > span {\n  justify-content: center;\n}\n\nself .row.selected {\n  background-color: #caede2;\n}\n\nself .row-even:not(.selected):not(:hover) {\n  background-color: #f8f8f8;\n}\n\nself .header .resizable > :not([hidden]) ~ :not([hidden]),\nself .row > :not([hidden]) ~ :not([hidden]),\nself .Grid .innerScrollContainer,\nself .Grid .innerScrollContainer > :not([hidden]) ~ :not([hidden]) {\n  border-width: 0;\n}",
-        "scope": "local",
         "parentId": null,
         "children": {}
       }
@@ -260,7 +253,7 @@
         "MZpnhI7svt",
         "Bo-oMS0DhT",
         "FkAscXl4Ll",
-        "PlFqBhBbNs"
+        "78AK3W01sl"
       ],
       "linkedNodes": {}
     },
@@ -468,7 +461,9 @@
         "readonly": false,
         "classNames": [
           "inputText__input"
-        ]
+        ],
+        "format": "#,##0.00 €",
+        "dataType": "number"
       },
       "displayName": "Input",
       "custom": {},
@@ -538,81 +533,13 @@
         "readonly": false,
         "classNames": [
           "inputText__input"
-        ]
+        ],
+        "format": "[Red][<=1000]",
+        "dataType": "number"
       },
       "displayName": "Input",
       "custom": {},
       "parent": "FkAscXl4Ll",
-      "hidden": false,
-      "nodes": [],
-      "linkedNodes": {}
-    },
-    "PlFqBhBbNs": {
-      "type": {
-        "resolvedName": "TextInput"
-      },
-      "isCanvas": false,
-      "props": {
-        "events": [],
-        "placeholder": "placeholder",
-        "label": "label",
-        "labelPosition": "top",
-        "classNames": [
-          "inputText"
-        ]
-      },
-      "displayName": "Text Input",
-      "custom": {},
-      "parent": "j2GNkMqR1x",
-      "hidden": false,
-      "nodes": [],
-      "linkedNodes": {
-        "label": "B0FO8snEVd",
-        "input": "D257lhaD_e"
-      }
-    },
-    "B0FO8snEVd": {
-      "type": {
-        "resolvedName": "Label"
-      },
-      "isCanvas": false,
-      "props": {
-        "events": [],
-        "moveable": false,
-        "text": "Category",
-        "deletable": true,
-        "classNames": [
-          "inputText__label"
-        ]
-      },
-      "displayName": "Label",
-      "custom": {},
-      "parent": "PlFqBhBbNs",
-      "hidden": false,
-      "nodes": [],
-      "linkedNodes": {}
-    },
-    "D257lhaD_e": {
-      "type": {
-        "resolvedName": "Input"
-      },
-      "isCanvas": false,
-      "props": {
-        "events": [],
-        "deletable": false,
-        "className": "fd-input w-full bg-transparent",
-        "type": "text",
-        "datasource": "item.category",
-        "moveable": false,
-        "placeholder": "",
-        "readonly": false,
-        "classNames": [
-          "inputText__input"
-        ]
-      },
-      "displayName": "Input",
-      "custom": {},
-      "parent": "PlFqBhBbNs",
       "hidden": false,
       "nodes": [],
       "linkedNodes": {}
@@ -708,11 +635,12 @@
       },
       "isCanvas": false,
       "props": {
-        "loopable": true,
+        "iterable": true,
         "classNames": [
           "datatableCSS1"
         ],
         "events": [],
+        "loopable": true,
         "style": {
           "height": "600px",
           "width": "1000px",
@@ -748,17 +676,19 @@
           {
             "title": "Price",
             "source": "price",
-            "format": "",
+            "format": "#,##0.00 €",
             "width": "176px",
             "sorting": true,
+            "dataType": "number",
             "id": "ap7NCBQASPEjZbb5StuwUF"
           },
           {
             "title": "Stock",
             "source": "stock",
-            "format": "",
+            "format": "[Red][<=1000]",
             "width": "95px",
             "sorting": true,
+            "dataType": "number",
             "id": "j8ybqV1vZYqYw6CKwqJjws"
           }
         ],
@@ -862,6 +792,18 @@
                 "strikethrough": false
               }
             ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "text": "DataTable style can be customized with CSS: here a radio component allows you to change the table style."
+              }
+            ]
           }
         ],
         "datasource": ""
@@ -914,6 +856,122 @@
       "displayName": "Radio",
       "custom": {},
       "parent": "_l8l1590Tq",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "78AK3W01sl": {
+      "type": {
+        "resolvedName": "SelectInput"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "placeholder": "placeholder",
+        "label": "label",
+        "classNames": [
+          "inputText"
+        ],
+        "labelPosition": "top"
+      },
+      "displayName": "Select input",
+      "custom": {},
+      "parent": "j2GNkMqR1x",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {
+        "label": "Je_cvUcGhS",
+        "select": "iVE7eOYLkK"
+      }
+    },
+    "Je_cvUcGhS": {
+      "type": {
+        "resolvedName": "Label"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "moveable": false,
+        "classNames": [
+          "inputText__label"
+        ],
+        "text": "Category",
+        "deletable": true
+      },
+      "displayName": "Label",
+      "custom": {},
+      "parent": "78AK3W01sl",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "iVE7eOYLkK": {
+      "type": {
+        "resolvedName": "Select"
+      },
+      "isCanvas": false,
+      "props": {
+        "events": [],
+        "deletable": false,
+        "className": "fd-select",
+        "options": [
+          {
+            "label": "CAT-0",
+            "value": "CAT-0",
+            "id": "rFt5ziiw8cmdkZcz66uPy7"
+          },
+          {
+            "label": "CAT-1",
+            "value": "CAT-1",
+            "id": "pMdmpNUWy2xA2KdNAxMryT"
+          },
+          {
+            "label": "CAT-2",
+            "value": "CAT-2",
+            "id": "cFRLUeuhGwuNekyAWGJrCg"
+          },
+          {
+            "label": "CAT-3",
+            "value": "CAT-3",
+            "id": "jQZqYT5hefjTgKhnqUKSZ5"
+          },
+          {
+            "label": "CAT-4",
+            "value": "CAT-4",
+            "id": "2thKf7tEj7171tsR2T4KAy"
+          },
+          {
+            "label": "CAT-5",
+            "value": "CAT-5",
+            "id": "vkjBbbwQBUqrVF569nsL9r"
+          },
+          {
+            "label": "CAT-6",
+            "value": "CAT-6",
+            "id": "mnuua6KKQrk419Kbab63Qz"
+          },
+          {
+            "label": "CAT-7",
+            "value": "CAT-7",
+            "id": "qxZxrdoJaVEu9iCXhY6SJ6"
+          },
+          {
+            "label": "CAT-8",
+            "value": "CAT-8",
+            "id": "j9X46CS9mVGM3yuEA72hyb"
+          },
+          {
+            "label": "CAT-9",
+            "value": "CAT-9",
+            "id": "sceDFskDvBJiqZ444GVfTU"
+          }
+        ],
+        "datasource": "item.category",
+        "moveable": false
+      },
+      "displayName": "Select",
+      "custom": {},
+      "parent": "78AK3W01sl",
       "hidden": false,
       "nodes": [],
       "linkedNodes": {}

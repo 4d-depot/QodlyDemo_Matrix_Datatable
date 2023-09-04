@@ -7,7 +7,9 @@
 				"type": "scalar",
 				"namespace": "",
 				"dataType": "object",
-				"initialValue": {}
+				"initialValue": {
+					"visuals": []
+				}
 			},
 			{
 				"id": "result",
@@ -17,11 +19,27 @@
 				"initialValue": ""
 			},
 			{
-				"id": "selectedVisual",
+				"id": "visuals",
 				"type": "scalar",
 				"namespace": "",
+				"dataType": "array",
+				"initialValue": []
+			},
+			{
+				"id": "selectedVisual",
+				"type": "scalar",
+				"from": "visuals",
+				"namespace": "",
 				"dataType": "object",
-				"initialValue": {}
+				"initialValue": "first"
+			},
+			{
+				"id": "items",
+				"type": "entitysel",
+				"dataclass": "item",
+				"initialValue": "all",
+				"depth": null,
+				"pageSize": 100
 			}
 		],
 		"styles": [
@@ -76,6 +94,24 @@
 							"datasource": "manifest",
 							"name": "$0",
 							"type": "Variable"
+						}
+					},
+					{
+						"type": "simple-action",
+						"id": "r7YtCx2jzk2MJZ35ucHqgb",
+						"events": [
+							"onload"
+						],
+						"action": "copy",
+						"datasource": {
+							"name": "manifest.visuals",
+							"namespace": "",
+							"dataType": "object",
+							"from": "",
+							"target": "visuals",
+							"targetNamespace": "",
+							"targetType": "array",
+							"type": "unknown"
 						}
 					}
 				],
@@ -484,7 +520,7 @@
 					"enableFlex": false,
 					"flexProps": {
 						"nbOfRows": 1,
-						"nbOfColumns": 3
+						"nbOfColumns": 2
 					}
 				},
 				"currentElement": "selectedVisual"
@@ -504,7 +540,24 @@
 			},
 			"isCanvas": true,
 			"props": {
-				"events": [],
+				"events": [
+					{
+						"type": "simple-action",
+						"id": "wzApcwNYzcm2anXaV7dUpb",
+						"events": [
+							"onmouseenter"
+						],
+						"action": "copy",
+						"datasource": {
+							"name": "$This",
+							"from": "",
+							"type": "entity",
+							"namespace": "",
+							"target": "selectedVisual",
+							"targetNamespace": ""
+						}
+					}
+				],
 				"style": {
 					"minHeight": "40px",
 					"display": "flex",
@@ -699,6 +752,20 @@
 							"datasource": "result"
 						},
 						"feedback": true
+					},
+					{
+						"type": "simple-action",
+						"id": "5Ge5hSDXiqZTDrpM8ESghC",
+						"events": [
+							"onclick"
+						],
+						"action": "refresh",
+						"datasource": {
+							"name": "items",
+							"from": "",
+							"type": "entitysel",
+							"namespace": ""
+						}
 					}
 				],
 				"iconPosition": "hidden",
@@ -743,6 +810,21 @@
 					"hoverButton"
 				],
 				"events": [
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "mm85dLQEsP4rGYwhh3QzGD",
+						"method": "ds.checkData",
+						"params": [],
+						"returns": {
+							"name": "$0",
+							"type": "Variable"
+						},
+						"feedback": true
+					},
 					{
 						"type": "navigation",
 						"id": "5XXJfLNxawnyNqobsf85tq",
@@ -807,53 +889,9 @@
 			"hidden": false,
 			"nodes": [
 				"9IQJ_CYMUB",
-				"JkS2hplQqG",
+				"FfewLsFCzo",
 				"lXjWiJB4FF"
 			],
-			"linkedNodes": {}
-		},
-		"JkS2hplQqG": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": ""
-							},
-							{
-								"type": "datasource",
-								"datasource": "result",
-								"children": [
-									{
-										"text": "result",
-										"bold": false,
-										"italic": false,
-										"underlined": false,
-										"strikethrough": false
-									}
-								],
-								"dsType": "string",
-								"format": ""
-							},
-							{
-								"text": ""
-							}
-						]
-					}
-				],
-				"datasource": "result"
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "1r9OVfEcn0",
-			"hidden": false,
-			"nodes": [],
 			"linkedNodes": {}
 		},
 		"YxYDGFC7iG": {
@@ -989,8 +1027,10 @@
 				"style": {
 					"width": "50%",
 					"minWidth": "50%",
-					"maxWidth": "50%"
-				}
+					"maxWidth": "50%",
+					"display": "block"
+				},
+				"classNames": []
 			},
 			"displayName": "Stylebox",
 			"custom": {},
@@ -1013,11 +1053,64 @@
 					"height": "500px",
 					"width": "auto"
 				},
-				"datasource": "selectedVisual.image"
+				"datasource": "selectedVisual.image",
+				"serverSideRef": "preview"
 			},
 			"displayName": "Image",
 			"custom": {},
 			"parent": "Vx4UUgVmWw",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"FfewLsFCzo": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "The database currently has ",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							},
+							{
+								"type": "datasource",
+								"datasource": "items.length",
+								"children": [
+									{
+										"bold": false,
+										"italic": false,
+										"underlined": false,
+										"strikethrough": false,
+										"text": "xxxx"
+									}
+								],
+								"dsType": "number",
+								"format": "[Red][=0];[Green][>0]"
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " items"
+							}
+						]
+					}
+				],
+				"datasource": "items.length"
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "1r9OVfEcn0",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
