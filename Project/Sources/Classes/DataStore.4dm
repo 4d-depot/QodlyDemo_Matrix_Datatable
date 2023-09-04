@@ -11,7 +11,7 @@ exposed Function getManifestObject() : Object
 	return $manifestObject
 	
 	
-exposed Function updateCSS($cssName : Text; $oldCSSName : Text)
+exposed Function updateCSS($cssName : Text; $oldCSSName : Text) : Text
 	
 	Web Form:C1735["datatable"].removeCSSClass($oldCSSName)
 	Web Form:C1735["datatable"].addCSSClass($cssName)
