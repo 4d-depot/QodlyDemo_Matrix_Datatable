@@ -27,7 +27,7 @@ Case of
 		
 		$options:=New object:C1471
 		
-		$options.title:="Entity Selection & Collection"
+		$options.title:="Qodly matrix & datatable"
 		
 		$options.blog:="blog.4d.com"
 		
